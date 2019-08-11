@@ -1,0 +1,202 @@
+html {
+	background: #790000;
+	color: #fff;
+	font-family: steelfish;
+}
+
+a {
+	color: #000;
+	text-decoration: none;
+}
+
+.clear {
+	clear: both;
+}
+
+nav ul li {
+	display: inline-block;
+}
+
+h1 {
+	cursor: default;
+	font-size: 3.75em;
+	float: left;
+	padding: 5px 0 0 10px;
+}
+header #mainNav ul li {  /* targets li containing main 'Music' link */
+	font-size: 1.8em;
+	margin-bottom: 5px;
+	margin-left: 10px;
+	padding-top: 34px;
+}
+#mainNav a:hover {
+	color: #fff;
+}
+#socialLinksRight {
+	position: absolute;
+	top: 17px;
+	right: 10px;
+}
+#socialLinksRight li a {
+	background-image: url('img/social_sprite.png');
+	float: right;
+	text-indent: -9999px;
+	height: 35px;
+}
+/* MAIN SOCIAL LINKS ICONS */
+.soundcloud {
+	background-position: 0 0;
+	width: 57px;
+	height: 32px;
+}
+.twitter {
+	background-position: -57px 0;
+	width: 36px;
+	height: 29px;
+}
+.spotify {
+	background-position: -93px 0;
+	width: 34px;
+	height: 34px;
+}
+.facebook {
+	background-position: -127px 0;
+	width: 32px;
+	height: 32px;
+}
+#socialLinksRight .soundcloud, #socialLinksRight .twitter, #socialLinksRight .spotify {
+	margin-right: 15px;
+}
+
+#feature {
+	background: url('img/feature.jpg') no-repeat center center;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	height: 100%;
+}
+
+article {
+	background: #000;
+}
+article h2 {
+	background: #fff;
+	color: #000;
+	cursor: default;
+	font-size: 2.25em;
+	font-weight: bold;
+	padding: 7px 0 4px 10px;
+}
+article h2#social { /* centers the 'FOLLOW' h2 */
+	text-align: center;
+}
+#mobileMusic { /* hide the 'MUSIC' tabs images intended for mobile devices */
+	display: none;
+}
+article ol#desktopMusic li {
+	display: inline-block;
+	height: auto;
+	width: 25%;
+}
+article ol#desktopMusic li img { /* set images width to 100% of its li container */
+	height: auto;
+	width: 100%;
+}
+article section#musicBy { /* set image to fill its container and resize itself as window gets smaller */
+	background: url('img/mike.jpg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	border-top: 5px solid #790000;
+	height: 100%;
+	margin-top: -1px;
+	position: relative;
+}
+article h3 {
+	font-size: 1.5em;
+	position: absolute;
+	bottom: 10px;
+	left: 10px
+}
+
+/* MAIN SOCIAL LINKS */
+#socialLinksMain li { 
+	width:25%;
+	height: auto;
+}
+#socialLinksMain li img {
+	width: 100%;
+	height: auto;
+}
+
+footer h2 {
+	background: #000;
+	border-top: 5px solid #790000;
+	color: #fff;
+	font-size: 2.25em;
+	font-variant: small-caps;
+	margin-top: -2px;
+	padding: 10px 0;
+	text-align: center;
+}
+
+@font-face {
+	font-family: "steelfish";
+	src: url("fonts/steelfish.eot?") format("eot"), url("fonts/steelfish.woff") format("woff"), url("fonts/steelfish.ttf") format("truetype");
+}
+
+/*tablet*/
+@media only screen and (max-width: 768px) {
+	h1 {
+		font-size: 3em;
+		padding: 12px 0 10px 10px;
+	}
+	header #mainNav ul li {  /* hide li containing 'MUSIC' link */
+		display: none;
+	}
+	#socialLinksRight {  /* hide secondary social links */
+		display: none;
+	}
+	
+	article h2 {
+		font-size: 1.75em;
+		padding: 15px 0 12px 10px;
+	}
+
+	article ol#desktopMusic li {
+		width: 50%;
+	}  
+	
+	#socialLinksMain li { 
+		width: 50%;
+	}
+	
+	article section#musicBy { /* Although it looks like we're repeating code here we're actually
+	                             reseting the position and size of the image */
+		background: url('img/mike.jpg') no-repeat right fixed;
+		-webkit-background-size: cover;
+		-o-background-size: cover;
+		-moz-background-size: cover;
+		background-size: cover;
+	}
+	article h3 {
+		font-size: 1.3em;
+	}
+}
+
+/*mobile*/
+@media only screen and (max-width: 570px) {
+	#desktopMusic {
+		display: none;
+	}
+	#mobileMusic {
+		display: block;
+	}
+	article ol#mobileMusic li img {
+		height: auto;
+		width: 100%;
+		max-width: 100%;
+	}
+}
